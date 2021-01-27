@@ -1,0 +1,118 @@
+/* font-family: 'Roboto', sans-serif; */
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+
+.login-section,
+.transaction-section {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+}
+.transaction-section {
+    display: none;
+}
+
+
+.login-section {
+    padding: 25px;
+    box-shadow: 5px 5px 10px #cecece;
+    border-radius: 10px;
+    /* display: none; */
+}
+
+.transaction-card {
+    background: #ffffff;
+    border-radius: 10px;
+    border: none;
+}
+
+.transaction-text {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.deposit {
+    background-color: #5E4FCA;
+}
+
+.withdraw {
+    background-color: #F39571;
+}
+
+.balance {
+    background-color: #F09B02;
+}
+
+.input-field {
+	height: auto;
+	background-color: #ffffff;
+	padding: 25px 15px;
+	margin-top: 20%;
+	box-shadow: 5px 5px 10px #bfbfbf;
+}
+
+.input-field-items {
+
+}
+
+.transaction-btn {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive CSS */
+@media (max-width: 575px) { 
+    .login-section,
+    .transaction-section {
+        width: 75% !important;
+        position: unset !important;
+        transform: unset !important;
+    }
+    .transaction-card {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 841px) {
+    .login-section,
+    .transaction-section {
+        width: 75% !important;
+    }
+}
