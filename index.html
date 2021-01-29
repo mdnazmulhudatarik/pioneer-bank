@@ -57,7 +57,7 @@
                 <div class="card transaction-card text-white withdraw">
                     <div class="card-body">
                         <h5 class="card-title text-capitalize">withdraw</h5>
-                        <p class="card-text transaction-text">$ 00</p>
+                        <p class="card-text transaction-text">$ <span id="withdraw">00</span> </p>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                 <div class="card transaction-card text-white balance">
                     <div class="card-body">
                         <h5 class="card-title text-capitalize">balance</h5>
-                        <p class="card-text transaction-text">$ 00</p>
+                        <p class="card-text transaction-text">$ <span id="balance">1240</span> </p>
                     </div>
                 </div>
             </div>
@@ -84,10 +84,11 @@
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="input-field">
                     <div class="col-sm-12">
-                        <input type="text" class="form-control text mb-3" id="" value=""
+                        <input type="text" class="form-control text mb-3" id="withdraw-input" value=""
                             placeholder="$ Amount you want to deposit">
                     </div>
-                    <button type="button" class="btn btn-success text-capitalize transaction-btn">withdraw</button>
+                    <button type="button" id="withdraw-btn"
+                        class="btn btn-success text-capitalize transaction-btn">withdraw</button>
                 </div>
             </div>
 
@@ -118,25 +119,51 @@
 
         depoBtn.addEventListener('click', function () {
 
-            var newInput = (parseInt(depoInput.value))
-
+            var newInput = parseInt(depoInput.value)
             var newDeposit = parseFloat(deposit.innerText)
+            var displayDeposit = newDeposit + newInput;
 
-            var finalDeposit = newDeposit + newInput;
+            deposit.innerText = displayDeposit;
 
-            deposit.innerText = finalDeposit;
             depoInput.value = '';
 
+            // Balance JS
+            const currentBalance = document.getElementById('balance');
+            const parseBalance = parseFloat(currentBalance.innerText)
+
+            var totalBalance = parseBalance + newInput
+
+            currentBalance.innerText = totalBalance;
+
+
+        }) // End Deposit
+
+
+        // Withdraw Button JS
+        const withdrawBtn = document.getElementById('withdraw-btn')
+        const withdrawInput = document.getElementById('withdraw-input')
+        const withdraw = document.getElementById('withdraw')
+
+        withdrawBtn.addEventListener('click', function () {
+
+            var parseInput = parseFloat(withdrawInput.value);
+            var newWithdraw = parseFloat(withdraw.innerText);
+
+            var dislayWithdraw = parseInput + newWithdraw;
+
+            withdraw.innerText = dislayWithdraw;
+            withdrawInput.value = '';
+
+
+
+        
+
+        }) // End Withdraw
 
 
 
 
 
-
-
-
-
-        })
 
 
     </script>
