@@ -1,174 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- CSS |Stylesheet -->
+        <link rel="stylesheet" href="style.css">
 
-    <!-- CSS |Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+        <title>Pioneer Bank</title>
+    </head>
 
-    <title>Pioneer Bank</title>
-</head>
+    <body>
+        <!-- Login Section -->
+        <div class="container login-section w-50" id="login-area">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-12">
+                    <h1 class="text-center text-capitalize mb-4">welcome to pioneer bank</h1>
+                    <h2 class="text-capitalize mb-3 mt-3">login</h2>
 
-<body>
-    <!-- Login Section -->
-    <div class="container login-section w-50" id="login-area">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-12">
-                <h1 class="text-center text-capitalize mb-4">welcome to pioneer bank</h1>
-                <h2 class="text-capitalize mb-3 mt-3">login</h2>
+                    <div class="col-sm-12 mb-3">
+                        <input type="text" class="form-control" id="" value="" placeholder="Enter username">
+                    </div>
 
-                <div class="col-sm-12 mb-3">
-                    <input type="text" class="form-control" id="" value="" placeholder="Enter username">
+                    <div class="col-sm-12">
+                        <input type="password" class="form-control" id="" value="" placeholder="Enter your password">
+                    </div>
+
+                    <button type="button" id="login-btn" class="btn btn-success text-capitalize mt-4">enter</button>
                 </div>
-
-                <div class="col-sm-12">
-                    <input type="password" class="form-control" id="" value="" placeholder="Enter your password">
-                </div>
-
-                <button type="button" id="login-btn" class="btn btn-success text-capitalize mt-4">enter</button>
             </div>
         </div>
-    </div>
-    <!-- Login Section -->
+        <!-- Login Section -->
 
-    <!-- Transaction Section -->
-    <div class="container transaction-section w-50 py-2" id="transaction-area">
-        <div class="row">
+        <!-- Transaction Section -->
+        <div class="container transaction-section w-50 py-2" id="transaction-area">
+            <div class="row">
 
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="card transaction-card text-white deposit">
-                    <div class="card-body">
-                        <h5 class="card-title text-capitalize">deposit</h5>
-                        <p class="card-text transaction-text">$ <span id="deposit">00</span></p>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="card transaction-card text-white deposit">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize">deposit</h5>
+                            <p class="card-text transaction-text">$ <span id="deposit">00</span></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="card transaction-card text-white withdraw">
-                    <div class="card-body">
-                        <h5 class="card-title text-capitalize">withdraw</h5>
-                        <p class="card-text transaction-text">$ <span id="withdraw">00</span> </p>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="card transaction-card text-white withdraw">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize">withdraw</h5>
+                            <p class="card-text transaction-text">$ <span id="withdraw">00</span> </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="card transaction-card text-white balance">
-                    <div class="card-body">
-                        <h5 class="card-title text-capitalize">balance</h5>
-                        <p class="card-text transaction-text">$ <span id="balance">1240</span> </p>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="card transaction-card text-white balance">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize">balance</h5>
+                            <p class="card-text transaction-text">$ <span id="balance">00</span> </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="input-field">
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control mb-3" id="depo-input" value=""
-                            placeholder="$ You want to withdraw">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="input-field">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control mb-3" id="depo-input" value=""
+                                placeholder="$ You want to withdraw">
+                        </div>
+                        <button type="button" id="depo-btn"
+                            class="btn btn-success text-capitalize transaction-btn">deposit</button>
                     </div>
-                    <button type="button" id="depo-btn"
-                        class="btn btn-success text-capitalize transaction-btn">deposit</button>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="input-field">
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control text mb-3" id="withdraw-input" value=""
-                            placeholder="$ Amount you want to deposit">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="input-field">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control text mb-3" id="withdraw-input" value=""
+                                placeholder="$ Amount you want to deposit">
+                        </div>
+                        <button type="button" id="withdraw-btn"
+                            class="btn btn-success text-capitalize transaction-btn">withdraw</button>
                     </div>
-                    <button type="button" id="withdraw-btn"
-                        class="btn btn-success text-capitalize transaction-btn">withdraw</button>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-    <!-- Transaction Section -->
+        <!-- Transaction Section -->
 
-    <!-- JS Files |Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+        <!-- JS Files |Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
 
-        // Login Button JS
-        const loginBtn = document.getElementById("login-btn");
-        loginBtn.addEventListener("click", function () {
-            const loginSection = document.getElementById("login-area");
-            loginSection.style.display = "none";
+            // Login Button JS
+            const loginBtn = document.getElementById("login-btn");
+            loginBtn.addEventListener("click", function () {
+                const loginSection = document.getElementById("login-area");
+                loginSection.style.display = "none";
 
-            const transaction = document.getElementById('transaction-area');
-            transaction.style.display = "block";
-        })
-
-
-        // Deposite Button JS
-        const depoBtn = document.getElementById('depo-btn');
-        const depoInput = document.getElementById('depo-input');
-        const deposit = document.getElementById('deposit');
+                const transaction = document.getElementById('transaction-area');
+                transaction.style.display = "block";
+            })
 
 
-        depoBtn.addEventListener('click', function () {
-
-            var newInput = parseInt(depoInput.value)
-            var newDeposit = parseFloat(deposit.innerText)
-            var displayDeposit = newDeposit + newInput;
-
-            deposit.innerText = displayDeposit;
-
-            depoInput.value = '';
-
-            // Balance JS
-            const currentBalance = document.getElementById('balance');
-            const parseBalance = parseFloat(currentBalance.innerText)
-
-            var totalBalance = parseBalance + newInput
-
-            currentBalance.innerText = totalBalance;
+            // Deposite Button JS
+            const depoBtn = document.getElementById('depo-btn');
+            const depoInput = document.getElementById('depo-input');
+            const deposit = document.getElementById('deposit');
 
 
-        }) // End Deposit
+            depoBtn.addEventListener('click', function () {
+
+                var newInput = parseInt(depoInput.value)
+                var newDeposit = parseFloat(deposit.innerText)
+                var displayDeposit = newDeposit + newInput;
+
+                deposit.innerText = displayDeposit;
+                depoInput.value = '';
 
 
-        // Withdraw Button JS
-        const withdrawBtn = document.getElementById('withdraw-btn')
-        const withdrawInput = document.getElementById('withdraw-input')
-        const withdraw = document.getElementById('withdraw')
+                // Balance JS
+                const currentBalance = document.getElementById('balance');
+                const parseBalance = parseFloat(currentBalance.innerText)
 
-        withdrawBtn.addEventListener('click', function () {
+                var totalBalance = parseBalance + newInput
 
-            var parseInput = parseFloat(withdrawInput.value);
-            var newWithdraw = parseFloat(withdraw.innerText);
-
-            var dislayWithdraw = parseInput + newWithdraw;
-
-            withdraw.innerText = dislayWithdraw;
-            withdrawInput.value = '';
+                currentBalance.innerText = totalBalance;
 
 
-
-        
-
-        }) // End Withdraw
+            }) // End Deposit
 
 
+            // Withdraw Button JS
+            const withdrawBtn = document.getElementById('withdraw-btn')
+            const withdrawInput = document.getElementById('withdraw-input')
+            const withdraw = document.getElementById('withdraw')
+
+            withdrawBtn.addEventListener('click', function () {
+
+                var parseInput = parseFloat(withdrawInput.value);
+                var newWithdraw = parseFloat(withdraw.innerText);
+
+                var dislayWithdraw = parseInput + newWithdraw;
+
+                withdraw.innerText = dislayWithdraw;
+                withdrawInput.value = '';
 
 
+                // Balance JS
+                const currentBalance = document.getElementById('balance');
+                const parseBalance = parseFloat(currentBalance.innerText)
+
+                var totalBalance = parseBalance - parseInput
+
+                currentBalance.innerText = totalBalance;
 
 
+            }) // End Withdraw
 
-    </script>
 
-
+        </script>
 </body>
 
 </html>
